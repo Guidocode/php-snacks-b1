@@ -54,6 +54,19 @@
     <hr>
 
   <?php endfor ?>
- 
+
+  <ul>
+    <?php foreach($alumns as $alumn): ?>
+
+      <li>
+        <?php echo $alumn["name"] ?>
+        <?php echo $alumn["lastname"] ?>
+        <br> Media voti: <?php echo $average = round( array_sum($alumn["grades"]) / count($alumn["grades"]), 1 ) ?>
+        <hr>
+      </li>
+
+    <?php endforeach; ?>
+  </ul>
+
 </body>
 </html>
